@@ -3,21 +3,19 @@ from selenium.webdriver.chrome.service import Service
 
 PATH = "/Users/MPB/repos/ChromeDriverDir/ChromeDriver"
 s = Service(PATH)
-
 print(PATH)
 
-
-driver = webdriver.Chrome(service=s)
+browser = webdriver.Chrome(service=s)
 
 
 def launchBrowser():
-    driver.get("https://www.github.com/abrahammehari")
+    browser.get("https://www.github.com/abrahammehari")
     while (True):  # Keep it from sleeping
         pass
 
 
-driver = launchBrowser()
+browser = launchBrowser()
 
-print(driver.title)
+print(browser.title)
 
-# driver.quit()
+# browser.quit()
